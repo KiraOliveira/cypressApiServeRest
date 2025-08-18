@@ -1,0 +1,23 @@
+{
+  "name": "cypressapiserverest",
+  "version": "1.0.0",
+  "description": "Criando automação para API ServeRest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KiraOliveira/cypressApiServeRest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KiraOliveira/cypressApiServeRest/issues"
+  },
+  "homepage": "https://github.com/KiraOliveira/cypressApiServeRest#readme",
+  "devDependencies": {
+    "cypress": "^14.5.4"
+  }
+}
