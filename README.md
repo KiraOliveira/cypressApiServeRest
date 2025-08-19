@@ -1,7 +1,7 @@
 # Automação do site ServeRest
 
 Repositório com o que prática na autimação de uma API.
-* Realizado os fluxos de 'Login, Listar e criar novos usuários', demais serão realizados.
+* Realizado os fluxos de 'Login, Listar e Criar Novos Usuários', demais serão realizados posteriormente.
 
 * Utilizando o framewrok [Cypress](https://www.cypress.io/).
 
@@ -60,5 +60,5 @@ npx cypress open(interação) ou npx cypress run(heandless)
 ---
 
 ## Execução dos testes
+<img width="805" height="332" alt="result19-08" src="https://github.com/user-attachments/assets/46dc6ebc-6490-487d-83c5-6f701f71db58" />
 
-<img width="846" height="341" alt="result" src="../cypressApiServeRest/cypress/screenshots/result19-08.png" />
