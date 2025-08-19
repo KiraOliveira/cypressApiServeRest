@@ -11,49 +11,49 @@
   "password": "teste123456",
   "administrador": "false"
 },
-"Three user": {
+"threeUser": {
   "nome": "Kira Oliveira",
-  "email": "kira.teste03@qa.com.br",
+  "email": "teste01@qa.com.br",
   "password": "teste123456",
   "administrador": "true"
 },
-"Four user": {
+"fourUser": {
   "nome": "Kira Teste 4",
-  "email": "kira.teste04@qa.com.br",
+  "email": "teste02@qa.com.br",
   "password": "teste123456",
   "administrador": "true"
 },
-"Five user": {
+"fiveUser": {
   "nome": "Kira Oliveira",
   "email": "kira.teste05@qa.com.br",
   "password": "teste123456",
   "administrador": "true"
 },
-"Six user": {
+"sixUser": {
   "nome": "Kira Oliveira",
   "email": "kira.teste06@qa.com.br",
   "password": "teste123456",
   "administrador": "true"
 },
-"Seven user": {
+"sevenUser": {
   "nome": "Kira Teste 7",
   "email": "kira.teste07@qa.com.br",
   "password": "teste123456",
   "administrador": "false"
 },
-"Eight user": {
+"eightUser": {
   "nome": "Kira Teste 8",
   "email": "kira.teste08@qa.com.br",
   "password": "teste123456",
   "administrador": "true"
 },
-"Nine user": {
+"nineUser": {
   "nome": "Kira Teste 9",
   "email": "kira.teste09@qa.com.br",
   "password": "teste123456",
   "administrador": "true"
 },
-"Ten user": {
+"tenUser": {
   "nome": "Kira Teste 10",
   "email": "kira.teste10@qa.com.br",
   "password": "teste123456",

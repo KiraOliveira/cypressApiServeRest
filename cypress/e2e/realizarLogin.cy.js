@@ -1,5 +1,7 @@
 /// <reference types="cypress"/>
 
+import data from '../fixtures/data.json'
+
 describe('Realizar Login com sucesso', () => {
     const baseUrl = "/";
     const apiEndLogin = {
@@ -17,9 +19,9 @@ describe('Realizar Login com sucesso', () => {
                 accept: contentTypeJson,
             },
             body: {
-                "email": "kiraoliveira1@qa.com.br",
-                "password": "teste123456"
-            }
+              "email": data.oneUser.email,
+              "password": data.oneUser.password
+        }
         }).then((response) => {
             expect(response.status).to.eql(200);
             expect(response.body).to.have.property('message');
@@ -59,7 +61,7 @@ describe('Realizar Login com sucesso', () => {
             failOnStatusCode: false,
             body: {
                 "email": "kiraoliveira1.com.br",
-                "password": "teste123456"
+                "password": data.oneUser.password
             }
         }).then((response) => {
             expect(response.status).to.equal(400);
@@ -77,7 +79,7 @@ describe('Realizar Login com sucesso', () => {
             },
             failOnStatusCode: false,
             body: {
-                "email": "kiraoliveira1@qa.com.br",
+                "email": data.oneUser.email,
                 "password": "123456"
             }
         }).then((response) => {

@@ -1,5 +1,7 @@
 /// <reference types="cypress"/>
 
+import data from '../fixtures/data.json'
+
 describe('template spec', () => {
 
   const contentTypeJson = "application/json";
@@ -12,10 +14,10 @@ describe('template spec', () => {
         accept: contentTypeJson,
       },
       body: {
-          "nome": "Kira Oliveira",
-          "email": "kiraoliveira1@qa.com.br",
-          "password": "teste123456",
-          "administrador": "true"
+          "nome": data.fiveUser.nome,
+          "email": data.fiveUser.email,
+          "password": data.fiveUser.password,
+          "administrador": data.fiveUser.administrador
       }
 
     })
@@ -30,8 +32,8 @@ describe('template spec', () => {
       method: 'POST',
       url: '/login',
       body: {
-          "email": "kiraoliveira1@qa.com.br",
-          "password": "teste123456"
+          "email": data.twoUser.email,
+          "password": data.twoUser.password
       }
 
     })
@@ -39,7 +41,7 @@ describe('template spec', () => {
       console.log('Realizando login', response)
 
       expect(response.status).to.equal(200)
-      expect(response.body).to.have.property('message')
+      expect(response.body.message).to.equal('Login realizado com sucesso')
       expect(response.body).to.have.property('authorization')
 
     })

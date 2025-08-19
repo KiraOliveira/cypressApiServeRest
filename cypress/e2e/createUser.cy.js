@@ -1,5 +1,7 @@
 /// <reference types="cypress"/>
 
+import data from '../fixtures/data.json'
+
 describe('template spec', () => {
 
   const contentTypeJson = "application/json";
@@ -12,10 +14,10 @@ describe('template spec', () => {
         accept: contentTypeJson,
       },
       body: {
-          "nome": "Kira Oliveira",
-          "email": "kira2oliveira0@qa.com.br",
-          "password": "teste123456",
-          "administrador": "true"
+          "nome": data.fourUser.nome,
+          "email": data.fourUser.email,
+          "password": data.fourUser.password,
+          "administrador": data.fourUser.administrador
       }
 
     })
@@ -23,6 +25,8 @@ describe('template spec', () => {
       console.log('Create new user', response)
 
       expect(response.status).to.equal(201)
+      expect(response.body.message).to.equal('Cadastro realizado com sucesso')
+      expect(response.body.id).not.to.be.null
     })
     })
 })

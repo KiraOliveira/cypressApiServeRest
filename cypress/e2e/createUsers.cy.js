@@ -21,14 +21,16 @@ describe('Create Users', () => {
           accept: contentTypeJson,
         },
         body: {
-          "nome": data.twoUser.nome,
-          "email": data.twoUser.email,
-          "password": data.twoUser.password,
-          "administrador": data.twoUser.administrador 
+          "nome": data.threeUser.nome,
+          "email": data.threeUser.email,
+          "password": data.threeUser.password,
+          "administrador": data.threeUser.administrador 
         }
       }).then((response) => {
         console.log('Create new uer', response)
         expect(response.status).to.equal(201);
+        expect(response.body.message).to.equal('Cadastro realizado com sucesso')
+        expect(response.body.id).not.to.be.null
       })
     };
     it("Teste", () => {
