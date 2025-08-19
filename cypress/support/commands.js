@@ -23,3 +23,13 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('dataForm', (newUser) => {
+  {
+    newUser.nome,
+    newUser.email,
+    newUser.password,
+    newUser.administrador
+}
+ 
+})

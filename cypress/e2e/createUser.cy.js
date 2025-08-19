@@ -13,7 +13,7 @@ describe('template spec', () => {
       },
       body: {
           "nome": "Kira Oliveira",
-          "email": "kiraoliveira1@qa.com.br",
+          "email": "kira2oliveira0@qa.com.br",
           "password": "teste123456",
           "administrador": "true"
       }
@@ -24,24 +24,5 @@ describe('template spec', () => {
 
       expect(response.status).to.equal(201)
     })
-    })    
-  it.only('Realizando login', () => {
-    cy.request({
-      method: 'POST',
-      url: '/login',
-      body: {
-          "email": "kiraoliveira1@qa.com.br",
-          "password": "teste123456"
-      }
-
     })
-    .then((response) => {
-      console.log('Realizando login', response)
-
-      expect(response.status).to.equal(200)
-      expect(response.body).to.have.property('message')
-      expect(response.body).to.have.property('authorization')
-
-    })
-    })  
 })

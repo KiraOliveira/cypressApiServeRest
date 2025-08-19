@@ -3,7 +3,7 @@
 describe("Listar usuários", () => {
     const baseUrl = "/";
     const apiEndList = {
-        users: '/usuarios',
+        allUsers: '/usuarios',
         userOne: '/usuarios/?_id=tsYgXq9xB4hnuEop,'
     };
 
@@ -12,7 +12,7 @@ describe("Listar usuários", () => {
     const listAllUsers = () => {
         cy.request({
             method: 'GET',
-            url: `${baseUrl}${apiEndList.users}`,
+            url: `${baseUrl}${apiEndList.allUsers}`,
             headers: {
                 accept: contentTypeJson,
             },

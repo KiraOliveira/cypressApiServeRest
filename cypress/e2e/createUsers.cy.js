@@ -1,45 +1,38 @@
 /// <reference types="cypress"/>
 
-describe('template spec', () => {
+import data from '../fixtures/data.json'
 
-  const contentTypeJson = "application/json";
+describe('Create Users', () => {
+    const baseUrl = "/";
+    const apiEndCreate = {
+      newOneUser: '/usuarios',
+      NewTwoUser: '/usuarios',
+      UserEmailInvalid: '/usuarios',
+      userPasswordInvalid: '/usuarios'
+    };
 
+    const contentTypeJson = "application/json";
 
-  it('Create new user', () => {
-    cy.request({
-      method: 'POST',
-      url: '/usuarios',
-      headers: {
-        accept: contentTypeJson,
-      },
-      body: {
-          "nome": "Kira Oliveira",
-          "email": "kiraoliveira1@qa.com.br",
-          "password": "teste123456",
-          "administrador": "true"
-      }
-
+    const createOneUser = () => {
+      cy.request({
+        method: 'POST', 
+        url: `${baseUrl}${apiEndCreate.newOneUser}`,
+        headers: {
+          accept: contentTypeJson,
+        },
+        body: {
+          "nome": data.twoUser.nome,
+          "email": data.twoUser.email,
+          "password": data.twoUser.password,
+          "administrador": data.twoUser.administrador 
+        }
+      }).then((response) => {
+        console.log('Create new uer', response)
+        expect(response.status).to.equal(201);
+      })
+    };
+    it("Teste", () => {
+      createOneUser();
     })
-    .then((response) => {
-      console.log('Create new user', response)
-
-      expect(response.status).to.equal(201)
-    })
-    })    
-  it.only('passes', () => {
-    cy.request({
-      method: 'POST',
-      url: '/login',
-      body: {
-          "email": "kiraoliveira1@qa.com.br",
-          "password": "teste123456"
-      }
-
-    })
-    .then((response) => {
-      console.log('passes', response)
-
-      expect(response.status).to.equal(200)
-    })
-    })  
+  
 })
